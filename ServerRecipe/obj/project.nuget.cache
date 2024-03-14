@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "NJ8uM5AS/Rozwm8IjRg7roh5P9qhjs0pvbe0ckR0XA+6XlP3BxGW90v9RilAIX7ZPe27ooOA9dF11h54oWVt4Q==",
+  "success": false,
+  "projectFilePath": "Y:\\Groups\\Group_3\\פרוידיגר  חנה\\Angular\\יום חמישי\\ServerRecipe\\ServerRecipe\\ServerRecipe.csproj",
+  "expectedPackageFiles": [],
+  "logs": [
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Unable to load the service index for source https://api.nuget.org/v3/index.json.",
+      "libraryId": "Swashbuckle.AspNetCore"
+    }
+  ]
+}
