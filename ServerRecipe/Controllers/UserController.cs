@@ -11,10 +11,10 @@ namespace AngularServer.Controllers
         //static List<User> Users = new List<User>();
        static List<User> Users = new List<User>
 {
-    new User { Code = 1, Name = "David", Address = "321 Pine St", Email = "david@example.com", Password = "mypassword1" },
-    new User { Code = 2, Name = "Eve", Address = "654 Birch St", Email = "eve@example.com", Password = "mypassword2" },
-    new User { Code = 3, Name = "Frank", Address = "987 Maple St", Email = "frank@example.com", Password = "mypassword3" },
-    new User { Code = 4, Name = "Grace", Address = "135 Walnut St", Email = "grace@example.com", Password = "mypassword4" }
+    new User { Id = 1, Name = "David", Address = "321 Pine St", Email = "david@example.com", Password = "mypassword1" },
+    new User { Id = 2, Name = "Eve", Address = "654 Birch St", Email = "eve@example.com", Password = "mypassword2" },
+    new User { Id = 3, Name = "Frank", Address = "987 Maple St", Email = "frank@example.com", Password = "mypassword3" },
+    new User { Id = 4, Name = "Grace", Address = "135 Walnut St", Email = "grace@example.com", Password = "mypassword4" }
 };
 
         // GET: api/<UserController>
@@ -28,7 +28,7 @@ namespace AngularServer.Controllers
         [HttpGet("{id}")]
         public ActionResult<User> Get(int id)
         {
-            var user = Users.Find(u => u.Code == id);
+            var user = Users.Find(u => u.Id == id);
             if (user == null)
             {
                 return NotFound();
@@ -45,14 +45,14 @@ namespace AngularServer.Controllers
                 return BadRequest();
             }
             Users.Add(user);
-            return CreatedAtAction(nameof(Get), new { id = user.Code }, user);
+            return CreatedAtAction(nameof(Get), new { id = user.Id }, user);
         }
 
         // PUT api/<UserController>/5
         [HttpPut("{id}")]
         public ActionResult<User> Put(int id, [FromBody] User user)
         {
-            var exixtingUser = Users.Find(u => u.Code == id);
+            var exixtingUser = Users.Find(u => u.Id == id);
             if (exixtingUser == null)
             {
                 return NotFound();
@@ -65,7 +65,7 @@ namespace AngularServer.Controllers
         [HttpDelete("{id}")]
         public ActionResult<User> Delete(int id)
         {
-            var user = Users.Find(u => u.Code == id);
+            var user = Users.Find(u => u.Id  == id);
             if (user == null)
             {
                 return NotFound();
