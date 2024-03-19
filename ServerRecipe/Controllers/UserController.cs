@@ -8,6 +8,7 @@ namespace AngularServer.Controllers
     [ApiController]
     public class UserController : ControllerBase
     {
+         private static int count = 5;
         //static List<User> Users = new List<User>();
        static List<User> Users = new List<User>
 {
@@ -44,6 +45,7 @@ namespace AngularServer.Controllers
             {
                 return BadRequest();
             }
+            user.Id=count++;
             Users.Add(user);
             return CreatedAtAction(nameof(Get), new { id = user.Id }, user);
         }

@@ -12,8 +12,8 @@ namespace ServerRecipe.Controllers
         static List<Category> CategoryList = new List<Category>
         {
             new Category{id=1,name="מנות ראשונות",routingIcon="../../../../assets/3.jpg"},
-            new Category{id=2,name="מנות מרכזיות",routingIcon="../../../../assets/2.jpg"},
-            new Category{id=3,name="מנות אחרונות",routingIcon="../../../../assets/1.jpg"}
+            new Category{id=2,name="מנות מרכזיות",routingIcon="../../../../assets/6.jpg"},
+            new Category{id=3,name="מנות אחרונות",routingIcon="../../../../assets/4.jpg"}
         };
         // GET: api/<CategoryController>
         [HttpGet]
